@@ -13,7 +13,7 @@ var minioClient = new Minio.Client({
 // File that needs to be uploaded.
 var file = 'sat-practice-test-7.zip'
 
-// Make a bucket called europetrip.
+// List buckets
 minioClient.listBuckets(function(err, buckets) {
   if (err) return console.log(err)
   console.log('buckets :', buckets)
