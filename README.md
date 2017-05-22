@@ -1,12 +1,14 @@
 # MinioObjectStorageSamples
 
 
-### My experiments to try uploading repositories to Object storage similar to Amazon S3
+### Minio is an Object storage server to store files/repos/images and other objects 
 
-Minio lets you upload files/ images/tar files to the cloud, and I was able to do some uploads to the Minio Bucket which is similar to the S3 
+The URL is https://www.minio.io/
 
-Here I have code to createbuckets, put an object ( i.e a zip file) and list the buckets.
+This platform lets you upload any kind of Repo/photos/images/files/zipfiles from local workstations. This platform implements Amazon's S3 APIs 
 
-Work in progress.
+Their APIs let you create a bucket in the Minio Cloud, List the contents, View buckets, delete and other capabilities.
 
-The Object storage server Installation, documentation, configuration in the cloud is https://docs.minio.io/
+Here I have sample code to createbuckets, list objects, list buckets, delete buckets etc all based on the Amazon S3 APIs.
+
+The Object storage server Installation, documentation, configuration can be viewed at https://docs.minio.io/
