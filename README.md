@@ -20,3 +20,12 @@ Interesting links :
 
 <img width="882" alt="screen shot 2017-05-22 at 4 16 34 pm" src="https://cloud.githubusercontent.com/assets/14288989/26304728/1da3e626-3f0a-11e7-85e1-e09485736fd5.png">
 
+Output when trying to create a new bucket and add a zip file ( or my object ) 
+
+Notice that it complains that the bucket already exists.
+
+<img width="845" alt="screen shot 2017-05-22 at 4 22 15 pm" src="https://cloud.githubusercontent.com/assets/14288989/26304962/f9e65f7e-3f0a-11e7-9b3f-5d19888b703e.png">
+
+
+
+

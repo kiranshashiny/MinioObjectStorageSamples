@@ -1,4 +1,4 @@
-#
+/*#
 # This Minio Client lets you create a Bucket in the us-east-1 region.
 # and then successfully upload a zip file. 
 # A sample zip file is uploaded as shown.
@@ -6,7 +6,7 @@
 # If this is run over again -then you will encounter an error that the bucket is already installed.
 #
 # Reference : https://docs.minio.io/docs/javascript-client-api-reference
-#
+# */
 var Minio = require('minio')
 
 // Instantiate the minio client with the endpoint
