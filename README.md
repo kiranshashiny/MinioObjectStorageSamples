@@ -29,3 +29,40 @@ Notice that it complains that the bucket already exists.
 
 
 
+
+Other methods of installing the Minio Client Utilities.
+ s3cmd or awscli
+
+Install s3cmd from https://sourceforge.net/projects/s3tools/files/s3cmd/
+
+To create a new bucket
+
+    ./s3cmd mb s3://mybucket
+
+    Bucket 's3://newbucket/' created
+
+
+If bucket has already been created
+
+    ./s3cmd mb s3://mybucket
+ERROR: S3 error: 409 (BucketAlreadyOwnedByYou): Your previous request to create the named bucket succeeded and you already own it.
+
+
+To list bucket 
+    s3cmd ls
+    
+To copy a file to new bucket 
+    s3cmd put newfile s3://newbucket
+
+
+        shashikiran:~ shashikiran$ s3cmd put newfile.old s3://testbucket
+        WARNING: Module python-magic is not available. Guessing MIME types based on file extensions.
+        upload: 'newfile.old' -> 's3://testbucket/newfile.old'  [1 of 1]
+         3185 of 3185   100% in    1s     3.09 kB/s  done
+
+
+To retrieve the file back into my local repo
+
+        shashikiran:~ shashikiran$ s3cmd get s3://testbucket/newfile.old
+        download: 's3://testbucket/newfile.old' -> './newfile.old'  [1 of 1]
+         3185 of 3185   100% in    1s     3.00 kB/s  done
