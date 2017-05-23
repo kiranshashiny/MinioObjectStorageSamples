@@ -45,7 +45,7 @@ To create a new bucket
 If bucket has already been created
 
     ./s3cmd mb s3://mybucket
-ERROR: S3 error: 409 (BucketAlreadyOwnedByYou): Your previous request to create the named bucket succeeded and you already own it.
+    ERROR: S3 error: 409 (BucketAlreadyOwnedByYou): Your previous request to create the named bucket succeeded and you already own it.
 
 
 To list bucket 
