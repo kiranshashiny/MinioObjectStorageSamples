@@ -45,7 +45,7 @@ minioClient.listBuckets(function(err, buckets) {
 
 console.log ("list objects in the bucket" );
 
-var stream = minioClient.listObjects('asiatrip','', true)
+var stream = minioClient.listObjects('rajasthantrip','', true)
 stream.on('data', function(obj) { console.log(obj) } )
 stream.on('error', function(err) { console.log(err) } )
 

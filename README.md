@@ -49,8 +49,23 @@ If bucket has already been created
 
 
 To list bucket 
-    s3cmd ls
-    
+        s3cmd ls
+
+
+To delete a bucket
+
+    shashikiran:~ shashikiran$ s3cmd rb s3://mybucket
+    Bucket 's3://mybucket/' removed
+
+To list contents in a bucket 
+        s3cmd ls s3://testbucket/
+
+        shashikiran:~ shashikiran$ s3cmd ls s3://testbucket/
+                               DIR   s3://testbucket/movie/
+        2017-05-23 10:07      3185   s3://testbucket/newfile
+        2017-05-23 10:08      3185   s3://testbucket/newfile.old
+
+            
 To copy a file to new bucket 
     s3cmd put newfile s3://newbucket
 
@@ -66,3 +81,27 @@ To retrieve the file back into my local repo
         shashikiran:~ shashikiran$ s3cmd get s3://testbucket/newfile.old
         download: 's3://testbucket/newfile.old' -> './newfile.old'  [1 of 1]
          3185 of 3185   100% in    1s     3.00 kB/s  done
+
+To upload a string to the bucket
+   
+StringUploader.js 
+
+        var Minio = require('minio')
+
+        // Instantiate the minio client with the endpoint
+        // and access keys as shown below.
+        var minioClient = new Minio.Client({
+            endPoint: 'play.minio.io',
+            port: 9000,
+            secure: true,
+            accessKey: 'Q3AM3UQ867SPQQA43P2F',
+            secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+        });
+
+        // Using putObject.
+        var buffer = "Hello World"
+
+        minioClient.putObject('rajasthantrip', '{[temperature:31; humidity:45]}', buffer, function(err, etag) {
+            if (err) return console.log(err)
+              console.log('String uploaded successfully.')
+        });
