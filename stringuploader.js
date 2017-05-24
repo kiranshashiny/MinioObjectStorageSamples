@@ -1,11 +1,7 @@
 /*#
-# This Minio Client lets you create a Bucket in the us-east-1 region.
-# and then successfully upload a zip file. 
-# A sample zip file is uploaded as shown.
-# Can be run only once.
-# If this is run over again -then you will encounter an error that the bucket is already installed.
 #
-# Reference : https://docs.minio.io/docs/javascript-client-api-reference
+# This uploads a string to the bucket.
+
 # */
 var Minio = require('minio')
 
@@ -19,10 +15,10 @@ var minioClient = new Minio.Client({
     secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
 });
 
-    // Using putObject.
-    var buffer = "Hello World"
+// Using putObject.
+var buffer = "Hello World"
 
-    minioClient.putObject('rajasthantrip', '{[temperature:31; humidity:45]}', buffer, function(err, etag) {
+minioClient.putObject('rajasthantrip', '{[temperature:31; humidity:45]}', buffer, function(err, etag) {
       if (err) return console.log(err)
       console.log('String uploaded successfully.')
-    });
+});
